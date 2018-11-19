@@ -1,0 +1,8 @@
+<!--page/contentDetails/contentDetails.wxml-->
+
+<!-- <text class='fixed_tit'>123</text>   第几话定位弹窗 -->
+<text class='fixed_end' animation='{{animationData}}' wx:if='{{End}}'>O!O客官你看完了哟~~</text>
+<view class='image_par'>
+    <image class='image' lazy-load style='width:{{style[index].width}}px;height:{{style[index].height}}px'  wx:for='{{images}}' wx:key='{{index}}' src='{{item.url}}' mode='aspectFill'></image>
+    
+</view>

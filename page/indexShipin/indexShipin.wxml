@@ -1,0 +1,24 @@
+<!--page/indexShipin/indexShipin.wxml-->
+<view class='list_box'>
+    <view class='list_block' bindtap='onclickCon' data-index='{{index}}'  wx:for='{{shipin}}' wx:key='{{index}}'>
+        <view>
+            <image class='list_img'  lazy-load='true'  src='{{item.hao_vimg}}' wx:if='{{item.mode}}' mode='aspectFit'></image>
+            <image class='list_img'  lazy-load='true'  src='{{item.hao_vimg}}' wx:else  mode='aspectFill'></image>
+        </view>
+
+        <text class='re_name list_title'>{{item.title}}</text>
+    </view>
+
+</view>
+
+
+
+
+
+
+ 
+<view class="widget-goTop" bindtap="goTop" wx:if='{{floorstatus}}'>
+  <view class="gotop-wrap">
+    <view class="icon icon-top"></view> <view>顶部</view>
+  </view>
+</view>

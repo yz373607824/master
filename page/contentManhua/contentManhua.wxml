@@ -1,0 +1,48 @@
+<!--page/contentManhua/contentManhua.wxml-->
+<view class='list_parent'>
+    <image class='list_bgImg' src='{{manhua.cover}}'></image>
+    <view class='list_Catalog'>
+        <image class='list_img' src='{{manhua.cover}}'></image>
+        <view class='list_text'>
+            <text class='list_title'>{{manhua.title}}</text>
+            <view class='list_author iconfont'>{{manhua.author}}</view>
+            <view class='list_author iconfont list_author1'>{{manhua.latestSectionTitleOrder}}</view>
+            <view class='list_click iconfont' bindtap='onUrl_one'>开始阅读</view>
+        </view>
+
+    </view>
+    <view class='list_contact' wx:if='{{manhua.announcement}}'>{{manhua.announcement}}</view>
+    <view class='list_contact' wx:else>{{manhua.description}}</view>
+
+    <view class='list_tab'>
+        <view class='tab_nav'>
+            <text class='tab_title iconfont icon0 {{active==0?"tab_active":""}}' catchtap='tabList0'>目录</text>
+            <text class='tab_title iconfont icon1 {{active==1?"tab_active":""}}' catchtap='tabList1'>简介</text>
+        </view>
+        <view class='list_con' >
+            <view class='con_Catalog' wx:if='{{active==0}}'>
+                <view class='con_ser_par'>
+                    <text class='con_ser'>{{manhua.finished==true?"完成":"连载中"}}</text>
+                    <text class='con_ser'>最后更新:{{manhua.latestSectionTitle}}</text>                
+                </view>
+
+                <view class='bookmark' style='{{loadMore==true?"height:auto":"height:376rpx"}}'>
+                    <text class='book_button {{book_button==index?"booK_this":""}}' bindtap='onUrl' wx:for="{{sectionId}}" data-sectionId='{{item.sectionId}}' data-an='{{index}}'  wx:key='{{index}}'>{{item.titleOrder}}</text>
+                    
+                </view>
+
+<view class='load_more iconfont' bindtap='loadMore'>{{loadMore==true?loadMoreText[1]:loadMoreText[0]}}</view>
+
+            </view>
+            <view class='con_description'  wx:else>
+
+                    {{manhua.description}}
+            </view>
+        </view>
+    </view>
+
+    
+
+</view>
+
+

@@ -1,0 +1,36 @@
+<!--page/indexPage/index.wxml-->
+
+<view class='tab_list'>
+    <text class='tab_title {{active==0?"tab_active":""}}' catchtap='tabList0'>排序</text>
+    <text class='tab_title {{active==1?"tab_active":""}}' catchtap='tabList1'>随机</text>
+</view>
+
+
+
+<view class='list_box'>
+    <view class='list_block' bindtap='onclickCon' data-index='{{index}}'  wx:for='{{commend}}' wx:key='{{index}}'>
+        <view wx:if='{{item.picurl.gif}}'>
+            <image class='list_img' lazy-load='true' src='{{item.picurl.gif}}' wx:if='{{item.mode}}' mode='aspectFit'></image>
+            <image class='list_img'  lazy-load='true'  src='{{item.picurl.gif}}' wx:else  mode='aspectFill'></image>
+        </view>
+        <view wx:else>
+            <image class='list_img'  lazy-load='true'  src='{{item.picurl_orig}}' wx:if='{{item.mode}}' mode='aspectFit'></image>
+            <image class='list_img'  lazy-load='true'  src='{{item.picurl_orig}}' wx:else  mode='aspectFill'></image>
+        </view>
+
+        <text class='re_name list_title'>{{item.title}}</text>
+    </view>
+
+</view>
+
+
+
+
+
+
+ 
+<view class="widget-goTop" bindtap="goTop" wx:if='{{floorstatus}}'>
+  <view class="gotop-wrap">
+    <view class="icon icon-top"></view> <view>顶部</view>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+<!--page/contentShipin/contentShipin.wxml-->
+<view class='con_body'>
+    <text class='con_title'>{{shipin.title}}</text>
+    <video class='con_img' src="{{shipin.sites}}"   controls show-center-play-btn show-fullscreen-btn show-play-btn enable-progress-gesture autoplay ></video>
+<!-- <web-view src="{{shipin.sites}}"> 1231231</web-view> -->
+
+    <view class='con_but'>
+        <text class='prev button' bindtap='con_prev'>上一个</text>
+        <text class='next button' bindtap='con_next'>下一个</text>
+    </view>
+</view>
+

@@ -1,0 +1,3 @@
+/* page/indexShipin/indexShipin.wxss */
+@import "../index/index.wxss";
+@import '../indexPage/indexPage.wxss'

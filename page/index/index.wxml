@@ -1,0 +1,89 @@
+
+
+<view class="wrap">
+    <swiper class="swipers" autoplay="{{autoplay}}" current="{{currentSwiper}}" bindchange="swiperChange" circular="{{circular}}">  
+        <block wx:for="{{imgs}}" wx:key="{{index}}">  
+            <swiper-item>  
+                 <image class='img' src="{{item}}"></image>  
+            </swiper-item>  
+        </block>  
+    </swiper>  
+   <!--重置小圆点的样式  -->
+    <view class="dots">  
+        <block wx:for="{{imgs}}" wx:key="{{index}}">  
+            <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>  
+        </block>  
+    </view>  
+</view>
+
+<!-- 分类 nav -->
+<view class='nav_par'>
+<view class='nav' style="background-image: url('https://lg-afppbxog-1257382327.cos.ap-shanghai.myqcloud.com/bg_y.png');background-size:100% 180rpx; ">
+    <navigator class='nav_one' wx:for='{{nav}}' url='{{item.url}}' wx:key='{{index}}'>
+        <image class='nav_img' src="{{item.ico}}"  lazy-load='true'></image>
+        <text>{{item.text}}</text>
+    </navigator>
+</view>
+</view>
+
+
+<!-- 推荐 段子 -->
+<view class='Recommend'>
+    <view class='re_top'>
+        <image class='re_title' src='../../image/re_img1.png'></image>
+        <navigator class='more' url='{{nav[0].url}}'>更多</navigator>
+    </view>
+    <view class='re_pro'>
+        <view class='re_tor' bindtap='onclickCon' wx:for="{{commend}}" wx:key="{{index}}" data-index='{{index}}'>
+            <image class='re_img' src='{{item.picurl.gif}}' wx:if='{{item.picurl.gif}}' mode='aspectFill'></image>
+            <image class='re_img' src='{{item.picurl_orig}}' wx:else  mode='aspectFill'></image>
+            <text class='re_name'>{{item.title}}</text>
+        </view>
+
+    </view>
+</view>
+
+
+
+
+<!-- ..推荐 漫画.... --> 
+<view class='Recommend'>
+    <view class='re_top'>
+        <image class='re_title' src='../../image/re_img2.png'></image>
+        <navigator class='more' url='{{nav[1].url}}'>更多</navigator>
+    </view>
+    <view class='re_pro'>
+        <view class='re_tor' bindtap='onManhuaCon' wx:for="{{manhua}}" wx:key="{{index}}" data-index='{{index}}' data-bookid='{{item.bookId}}'>
+            <image class='re_img' src='{{item.cover}}' mode='aspectFill'></image>
+            <text class='re_name'>{{item.title}}</text>
+        </view>
+
+    </view>
+</view>
+
+
+
+
+
+<!-- ....推荐 视频.... --> 
+<view class='Recommend'>
+    <view class='re_top'>
+        <image class='re_title' src='../../image/re_img3.png'></image>
+        <navigator class='more' url='{{nav[2].url}}'>更多</navigator>
+    </view>
+    <view class='re_pro'>
+        <view class='re_tor' bindtap='onShipinCon' wx:for="{{shipin}}" wx:key="{{index}}" data-index='{{index}}'>
+            <image class='re_img' src='{{item.hao_vimg}}' mode='aspectFill'></image>
+            <text class='re_name'>{{item.title}}</text>
+        </view>
+
+    </view>
+</view>
+
+
+
+<!-- 底部信息 -->
+<view class='buttom'>
+<view>公告：网站信息均来自互联网大数据</view>
+<view>如有侵权请联系微信号：15919463650(振宇)</view>
+</view>

@@ -1,0 +1,39 @@
+/* page/contentDetails/contentDetails.wxss */
+.image_par{
+    
+}
+.image{
+    width: 100%;
+    display: block;
+}
+.fixed_tit{
+    display: block;
+    width: 60%;
+    height: 80rpx;
+    background: rgba(0, 0, 0, .6);
+    color: #fff;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 80rpx;
+    border-radius: 30rpx;
+    position: fixed;
+    top: 150rpx;
+    left: 20%;
+    z-index: 99999;
+
+}
+.fixed_end{
+    display: block;
+    width: 60%;
+    height: 80rpx;
+    background: rgba(0, 0, 0, .6);
+    color: #fff;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 80rpx;
+    border-radius: 30rpx;
+    position: fixed;
+    bottom: 150rpx;
+    left: 20%;
+    z-index: 99999;
+}

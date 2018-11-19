@@ -1,0 +1,7 @@
+/* page/indexManhuaSearch/indexManhuaSearch.wxss */
+@import '../indexManhua/indexManhua.wxss';
+.search_text{
+    width:90%;
+    margin:5px auto;
+    font-size: 26rpx;
+}

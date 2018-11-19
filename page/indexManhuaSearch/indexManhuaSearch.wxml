@@ -1,0 +1,32 @@
+<!--page/indexManhuaSearch/indexManhuaSearch.wxml-->
+   <view class='search {{search_fixed}}'>
+        <icon class='search_icon' type='search' size='23' color='#fa7b5a' bindtap='search'></icon>
+
+        <input class='inp_search' type='text' confirm-type='search' bindconfirm='search'  bindinput='input' value='{{value}}' placeholder='输入关键词！'></input>
+
+    </view>
+    <view class='search_text'>搜索关键词："<text style='color:red'>{{dataC.data.key}}</text>" 结果有："<text style='color:red'>{{dataC.data.records.length}}</text>"</view>
+<view class='list_box'>
+    <view class='list_block' style='height:568rpx' bindtap='onclickCon' data-index='{{index}}' data-bookid='{{item.bookId}}'  wx:for='{{manhua}}' wx:key='{{index}}'>
+        <view>
+            <image class='list_img'  lazy-load='true'  src='{{item.cover}}' mode='aspectFill'></image>
+        </view>
+
+        <view class='mh_title'>{{item.title}}</view>
+        <view class='mh_author_lates'><text class='weight'>作者：</text>{{item.author}}</view>
+        <view class='mh_author_lates'><text class='weight'>最新：</text>{{item.latestSectionTitle}}</view>
+    </view>
+
+</view>
+
+
+
+
+
+
+ 
+<view class="widget-goTop" bindtap="goTop" wx:if='{{floorstatus}}'>
+  <view class="gotop-wrap">
+    <view class="icon icon-top"></view> <view>顶部</view>
+  </view>
+</view>
