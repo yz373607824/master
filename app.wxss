@@ -1,0 +1,36 @@
+page{
+  background: #fffcf7;
+  color: #6e6e6e;
+}
+/* 点击去除阴影 */
+.navigator-hover {
+	background:none;
+    opacity: 0.8;
+}
+
+
+/* 主颜色 */
+.color{
+    color: #fa7b5a;
+}
+
+image{
+    display: initial
+}
+
+
+/* 阿里巴巴在线图标 */
+@font-face {
+  font-family: 'iconfont';  /* project id 818546 */
+  src: url('//at.alicdn.com/t/font_818546_ew0m2k92byi.eot');
+  src: url('//at.alicdn.com/t/font_818546_ew0m2k92byi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_818546_ew0m2k92byi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_818546_ew0m2k92byi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_818546_ew0m2k92byi.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

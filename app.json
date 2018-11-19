@@ -1,0 +1,50 @@
+{
+  "pages":[
+    "page/index/index", 
+
+    "page/category/category",
+    
+    
+    "page/indexPage/indexPage",
+    "page/indexManhua/indexManhua",
+    "page/indexShipin/indexShipin",
+    
+    "page/contentPage/contentPage",
+    "page/contentManhua/contentManhua",
+    "page/contentShipin/contentShipin",
+    
+    "page/contentDetails/contentDetails",
+
+
+    "page/indexManhuaSearch/indexManhuaSearch",
+    "page/list/list",
+    "page/login/login"
+  ],
+  "window":{
+      "navigationStyle":"default",
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fa7b5a",
+    "navigationBarTitleText": "飞鱼宝贝段子",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar": {
+    "backgroundColor":"#fff",
+    "color":"#3e3e3e",
+    "selectedColor":"#fa7b5a",
+    "borderStyle":"#fa7b5a",
+    "position":"bottom",
+    "list": [{
+      "pagePath": "page/index/index",
+      "text": "首页",
+      "iconPath": "image/ico_home.png",
+      "selectedIconPath": "image/ico_selectHome.png"
+    },
+    {
+        "pagePath": "page/login/login",
+        "text": "我的",
+        "iconPath": "image/ico_home.png",
+        "selectedIconPath": "image/ico_selectHome.png"
+    }
+    ]
+  }
+}

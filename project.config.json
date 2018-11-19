@@ -1,0 +1,64 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.3",
+	"appid": "wxb6478ffb0430a4e0",
+	"projectname": "%E9%A3%9E%E9%B1%BC%E5%AE%9D%E8%B4%9D",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 3,
+			"list": [
+				{
+					"id": -1,
+					"name": "indexPage",
+					"pathName": "page/indexPage/indexPage",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "list",
+					"pathName": "page/list/list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "contentPage",
+					"pathName": "page/contentPage/contentPage",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "漫画栏目列表",
+					"pathName": "page/contentManhua/contentManhua",
+					"query": "index=1&bookid=4316808069910049882"
+				}
+			]
+		}
+	}
+}
